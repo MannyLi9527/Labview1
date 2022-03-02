@@ -1,0 +1,53 @@
+﻿<Window x:Class="Labview.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Labview"
+        xmlns:us="clr-namespace:Labview.UserControls"
+        xmlns:tc="clr-namespace:Labview.UserControls.Userfunc"
+        
+        mc:Ignorable="d"
+        Title="MainWindow" Height="900" Width="1600">
+    <Viewbox>
+        <Grid Width="1600" Height="900">
+            <Grid.ColumnDefinitions>
+               
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="250"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <StackPanel Grid.Row="1" Orientation="Horizontal" >
+                <tc:text_ctrl1 DataContext="{Binding textCtrl}"/>
+                <tc:text_ctrl1/>
+                <tc:text_ctrl1/>
+                <tc:text_ctrl1/>
+                <tc:text_ctrl1/>
+            </StackPanel>
+
+            <!--相机1--><!--
+            <StackPanel Grid.Row="1" Grid.Column="1"/>
+
+            --><!--相机2--><!--
+            <StackPanel>
+
+            </StackPanel>
+
+            --><!--相机3--><!--
+            <StackPanel>
+
+            </StackPanel>
+
+            --><!--相机4--><!--
+            <StackPanel>
+
+            </StackPanel>
+
+            --><!--相机5--><!--
+            <StackPanel>
+
+            </StackPanel>-->
+        </Grid>
+    </Viewbox>
+</Window>
