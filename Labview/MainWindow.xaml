@@ -7,23 +7,30 @@
         xmlns:us="clr-namespace:Labview.UserControls"
         xmlns:tc="clr-namespace:Labview.UserControls.Userfunc"
         
-        mc:Ignorable="d"
-        Title="MainWindow" Height="900" Width="1600">
-    <Viewbox>
+        mc:Ignorable="d" Width="1600" Height="900"
+        Title="MainWindow"  WindowState="Maximized" Topmost="False" WindowStyle="None" >
+    <Viewbox >
         <Grid Width="1600" Height="900">
             <Grid.ColumnDefinitions>
-               
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition Height="250"/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
+
+            <StackPanel Grid.Row="0">
+                <us:SoftwareSet1/>
+            </StackPanel>
+            
             <StackPanel Grid.Row="1" Orientation="Horizontal" >
-                <tc:text_ctrl1 DataContext="{Binding textCtrl}"/>
-                <tc:text_ctrl1/>
-                <tc:text_ctrl1/>
-                <tc:text_ctrl1/>
-                <tc:text_ctrl1/>
+
+                <us:Display Margin="40,0,20,0" DataContext="{Binding  CamCtrl}"/>
+                <us:Display Margin="20,0,20,0" DataContext="{Binding  CamCtrl1}"/>
+                <us:Display Margin="20,0,20,0" DataContext="{Binding  CamCtrl2}"/>
+                <us:Display Margin="20,0,20,0" DataContext="{Binding  CamCtrl3}"/>
+                <us:Display Margin="20,0,0,0" DataContext="{Binding  CamCtrl4}"/>
+               
+                
             </StackPanel>
 
             <!--相机1--><!--

@@ -14,6 +14,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using HandyControl;
+using Labview.UserControls.Userfunc;
+using System.Runtime.InteropServices;
 
 namespace Labview
 {
@@ -23,10 +25,17 @@ namespace Labview
     public partial class MainWindow : System.Windows.Window
     {
         MainViewModel MainVM = new MainViewModel();
+        
+
         public MainWindow()
         {
             InitializeComponent();
             this.DataContext = MainVM;
+            
         }
+       
     }
+        
+    
 }
+

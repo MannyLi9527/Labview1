@@ -1,0 +1,19 @@
+﻿<UserControl x:Class="Labview.UserControls.Userfunc.Ringinter"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Labview.UserControls.Userfunc"
+                xmlns:input="clr-namespace:System.Windows.Input;assembly=PresentationCore"
+             mc:Ignorable="d" 
+             Height="520" Width="1000">
+    <Viewbox Height="520" Width="1000">
+        <StackPanel Orientation="Horizontal" >
+            <local:text_ctrl1 DataContext="{Binding DJtextCtrl1}"/>
+            <local:text_ctrl1 DataContext="{Binding DJtextCtrl2}"/>
+            <local:text_ctrl1 DataContext="{Binding DJtextCtrl3}"/>
+            <local:text_ctrl1 DataContext="{Binding DJtextCtrl4}"/>
+        </StackPanel>
+        
+    </Viewbox>
+</UserControl>

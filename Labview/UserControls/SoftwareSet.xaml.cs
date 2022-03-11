@@ -12,18 +12,19 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using HandyControl;
 
 namespace Labview.UserControls
 {
     /// <summary>
-    /// HandyControltest.xaml 的交互逻辑
+    /// SoftwareSet1.xaml 的交互逻辑
     /// </summary>
-    public partial class HandyControltest : UserControl
+    public partial class SoftwareSet1 : UserControl
     {
-        public HandyControltest()
+        public SoftwareSet1()
         {
             InitializeComponent();
         }
+
+       
     }
 }

@@ -44,6 +44,9 @@
     <Reference Include="HandyControl, Version=3.3.0.0, Culture=neutral, PublicKeyToken=45be8712787a1e5b, processorArchitecture=MSIL">
       <HintPath>..\packages\HandyControl.3.3.0\lib\net461\HandyControl.dll</HintPath>
     </Reference>
+    <Reference Include="MvCameraControl.Net">
+      <HintPath>C:\Program Files (x86)\MVS\Development\DotNet\AnyCpu\MvCameraControl.Net.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
@@ -64,38 +67,38 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="MainViewModel.cs" />
-    <Compile Include="TextCtrlViewModel.cs" />
-    <Compile Include="UserControls\HandyControltest.xaml.cs">
-      <DependentUpon>HandyControltest.xaml</DependentUpon>
+    <Compile Include="UserControls\BaseUserfunc\ComToCamCtrl.xaml.cs">
+      <DependentUpon>ComToCamCtrl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\SoftwareSet1.xaml.cs">
-      <DependentUpon>SoftwareSet1.xaml</DependentUpon>
+    <Compile Include="ViewModel\CamerParamViewModel.cs" />
+    <Compile Include="ViewModel\DisplayViewModel.cs" />
+    <Compile Include="ViewModel\MainViewModel.cs" />
+    <Compile Include="ViewModel\TextCtrlViewModel.cs" />
+    <Compile Include="UserControls\SoftwareSet.xaml.cs">
+      <DependentUpon>SoftwareSet.xaml</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\Userfunc\Angledete.xaml.cs">
-      <DependentUpon>Angledete.xaml</DependentUpon>
+    <Compile Include="UserControls\Userfunc\AngleCtrl.xaml.cs">
+      <DependentUpon>AngleCtrl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\Userfunc\CatchCircle.xaml.cs">
-      <DependentUpon>CatchCircle.xaml</DependentUpon>
+    <Compile Include="UserControls\Userfunc\LocalCtrl.xaml.cs">
+      <DependentUpon>LocalCtrl.xaml</DependentUpon>
     </Compile>
     <Compile Include="UserControls\Display.xaml.cs">
       <DependentUpon>Display.xaml</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\Userfunc\Ringinter.xaml.cs">
-      <DependentUpon>Ringinter.xaml</DependentUpon>
+    <Compile Include="UserControls\Userfunc\AssembleCtrl.xaml.cs">
+      <DependentUpon>AssembleCtrl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\Userfunc\Somadete.xaml.cs">
-      <DependentUpon>Somadete.xaml</DependentUpon>
+    <Compile Include="UserControls\Userfunc\.xaml.cs">
+      <DependentUpon>GlueJudgCtrl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\Userfunc\Specification1.xaml.cs">
-      <DependentUpon>Specification1.xaml</DependentUpon>
+    <Compile Include="UserControls\Userfunc\MatchCtrl.xaml.cs">
+      <DependentUpon>MatchCtrl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\Userfunc\TemplateMatch.xaml.cs">
-      <DependentUpon>TemplateMatch.xaml</DependentUpon>
+    <Compile Include="UserControls\BaseUserfunc\BaseControl.xaml.cs">
+      <DependentUpon>BaseControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\Userfunc\text_ctrl1.xaml.cs">
-      <DependentUpon>text_ctrl1.xaml</DependentUpon>
-    </Compile>
+    <Compile Include="ViewModel\Dispaly.cs" />
     <Compile Include="ViewModel\TextCtrl.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -109,19 +112,19 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="UserControls\HandyControltest.xaml">
+    <Page Include="UserControls\BaseUserfunc\ComToCamCtrl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="UserControls\SoftwareSet1.xaml">
+    <Page Include="UserControls\SoftwareSet.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="UserControls\Userfunc\Angledete.xaml">
+    <Page Include="UserControls\Userfunc\AngleCtrl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="UserControls\Userfunc\CatchCircle.xaml">
+    <Page Include="UserControls\Userfunc\LocalCtrl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -129,23 +132,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="UserControls\Userfunc\Ringinter.xaml">
+    <Page Include="UserControls\Userfunc\AssembleCtrl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="UserControls\Userfunc\Somadete.xaml">
+    <Page Include="UserControls\Userfunc\GlueJudgCtrl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="UserControls\Userfunc\Specification1.xaml">
+    <Page Include="UserControls\Userfunc\MatchCtrl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="UserControls\Userfunc\TemplateMatch.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="UserControls\Userfunc\text_ctrl1.xaml">
+    <Page Include="UserControls\BaseUserfunc\BaseControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

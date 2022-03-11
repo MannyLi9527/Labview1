@@ -25,15 +25,17 @@ namespace Labview.UserControls
     /// </summary>
     public partial class Display : UserControl
     {
+
+
+        public MainViewModel PJMVM = new MainViewModel();
+        public MainViewModel DJMVM = new MainViewModel();
+        public MainViewModel MVM2 = new MainViewModel();
+        public MainViewModel MVM3 = new MainViewModel();
         public Display()
         {
             InitializeComponent();
         }
-
         
-
-
-
         #region 只允许输入数字
         //isDigit是否是数字
         public static bool isNumberic(string _string)
@@ -78,71 +80,91 @@ namespace Labview.UserControls
         #endregion
 
         #region 功能参数设置弹窗
+
+        //捕捉圆弹窗
         private void Btn_catchcircle_Click(object sender, RoutedEventArgs e)
         {
             var window = new Window();
+            window.WindowStyle = WindowStyle.ToolWindow;
             CatchCircle catchCircle = new CatchCircle();
-            window.Content = catchCircle;
-            
-            //MessageBox.Show(catchCircle.ActualWidth.ToString()+"/"+catchCircle.ActualHeight.ToString());
-            window.Show();
-            window.Width = catchCircle.ActualWidth;
-            window.Height = catchCircle.ActualHeight;
-            //输入的参数数据需要传输
-
-            //int a = 11;
+            window.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            window.Height = catchCircle.Height + 50;
+            window.Width = catchCircle.Width + 50;
+            window.Content = catchCircle;            
+            window.ShowDialog();
+           
         }
 
+        //角度，标识点检测弹窗
         private void Btn_angledete_Click(object sender, RoutedEventArgs e)
         {
             var window = new Window();
+            window.WindowStyle = WindowStyle.ToolWindow;
             Angledete angledete = new Angledete();
+            window.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            window.Height = angledete.Height + 50;
+            window.Width = angledete.Width + 50;
             window.Content = angledete;
-            window.Show();
-            window.Width = angledete.ActualWidth;
-            window.Height = angledete.ActualHeight;
+            window.ShowDialog();           
         }
 
+        //模板匹配弹窗
         private void Btn_platedete_Click(object sender, RoutedEventArgs e)
         {
             var window = new Window();
+            window.WindowStyle = WindowStyle.ToolWindow;
             TemplateMatch templateMatch = new TemplateMatch();
+            window.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            window.Height = templateMatch.Height+50;
+            window.Width = templateMatch.Width+50;
             window.Content = templateMatch;
-            window.Show();
-            window.Width = templateMatch.ActualWidth;
-            window.Height = templateMatch.ActualHeight;
+            window.ShowDialog();
+            
         }
 
-        private void Btn_somadete_Click(object sender, RoutedEventArgs e)
+
+       
+
+        private void Btn_PJspec1_Click(object sender, RoutedEventArgs e)
         {
             var window = new Window();
-            Somadete somadete = new Somadete();
-            window.Content = somadete;
-            window.Show();
-            window.Height = somadete.ActualHeight;
-            window.Width = somadete.ActualWidth;
+            window.WindowStyle = WindowStyle.ToolWindow;
+            Specification1 specification = new Specification1();
+            window.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            window.Height = specification.Height + 50;
+            window.Width = specification.Width + 50;
+            window.Content = specification;
+            specification.DataContext = PJMVM;
+            
+            window.ShowDialog();
 
         }
 
-        private void Btn_ringdete_Click(object sender, RoutedEventArgs e)
+        private void Btn_DJspec_Click(object sender, RoutedEventArgs e)
         {
             var window = new Window();
+            window.WindowStyle = WindowStyle.ToolWindow;
             Ringinter ringinter = new Ringinter();
+            window.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            window.Height = ringinter.Height + 50;
+            window.Width = ringinter.Width + 50;
             window.Content = ringinter;
-            window.Show();
-            window.Width = ringinter.ActualWidth;
-            window.Height = ringinter.ActualHeight;
+            ringinter.DataContext = DJMVM;
+            window.ShowDialog();
+           
+        }
+        private void Btn_ComToCam_Click(object sender, RoutedEventArgs e)
+        {
+
         }
 
-        private void Btn_spec1_Click(object sender, RoutedEventArgs e)
+        private void Btn_ComToPLC_Click(object sender, RoutedEventArgs e)
         {
-            var window = new Window();
-            Specification1 specification1 = new Specification1();
-            window.Content = specification1;
-            window.Show();
-            window.Width = specification1.ActualWidth;
-            window.Height = specification1.ActualHeight;
+
         }
+
+
         #endregion
+
     }
 }

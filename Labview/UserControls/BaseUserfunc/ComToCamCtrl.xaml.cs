@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Labview.UserControls
+namespace Labview.UserControls.BaseUserfunc
 {
     /// <summary>
-    /// SoftwareSet1.xaml 的交互逻辑
+    /// ComToCamCtrl.xaml 的交互逻辑
     /// </summary>
-    public partial class SoftwareSet1 : UserControl
+    public partial class ComToCamCtrl : UserControl
     {
-        public SoftwareSet1()
+        public ComToCamCtrl()
         {
             InitializeComponent();
         }

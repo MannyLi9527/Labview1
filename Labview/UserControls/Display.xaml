@@ -16,7 +16,7 @@
                 <RowDefinition Height="40"/>
                 <RowDefinition Height="280"/>
             </Grid.RowDefinitions>
-            <TextBlock Grid.Row="0" Grid.Column="0" Text="相机一" FontSize="25" Foreground="Blue" HorizontalAlignment="Center"/>
+            <TextBlock  Grid.Row="0" Grid.Column="0" Text="{Binding cam_value0}" FontSize="25" Foreground="Blue" HorizontalAlignment="Center"/>
             <Image Grid.Row="1" Grid.Column="0"/>
             <Border Grid.Row="1" Grid.Column="0" BorderBrush="Gray" BorderThickness="2" CornerRadius="5"/>
 
@@ -71,7 +71,7 @@
                                     <TextBlock Margin="10"   FontSize="25" Text="相机启用:" Foreground="Blue" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                                 </StackPanel>
                                 <StackPanel Grid.Column="1">
-                                    <hc:TextBox Margin="0,3,0,0" Height="45"  PreviewKeyDown="intervalBox_PreviewKeyDown" PreviewTextInput="intervalBox_PreviewTextInput" DataObject.Pasting="intervalBox_Pasting" input:InputMethod.IsInputMethodEnabled="False" Grid.Row="1" Grid.Column="1" Text="111" BorderBrush="Gray" BorderThickness="2" VerticalAlignment="Center" />
+                                    <hc:TextBox Margin="0,3,0,0" Height="45"  PreviewKeyDown="intervalBox_PreviewKeyDown" PreviewTextInput="intervalBox_PreviewTextInput" DataObject.Pasting="intervalBox_Pasting" input:InputMethod.IsInputMethodEnabled="False" Grid.Row="1" Grid.Column="1" Text="{Binding cam_value1}" BorderBrush="Gray" BorderThickness="2" VerticalAlignment="Center" />
                                     <Border Margin="0,2,0,0" Height="45" BorderBrush="Gray" BorderThickness="2" CornerRadius="5">
                                         <TextBlock  Text="0"  HorizontalAlignment="Center" VerticalAlignment="Center"/>
                                         
@@ -80,7 +80,7 @@
                                         <ComboBoxItem Content="触发拍照" IsSelected="True" FontSize="15"/>
                                         <ComboBoxItem Content="连续拍照" FontSize="15"/>
                                     </hc:ComboBox>
-                                    <ToggleButton  Margin="0,5,0,5" IsChecked="True"  HorizontalAlignment="Center" Style="{StaticResource ToggleButtonSwitch}" Content="123" Command="{Binding InfoCmd}"  />
+                                    <ToggleButton  Margin="0,5,0,5" IsChecked="True"  HorizontalAlignment="Center" Style="{StaticResource ToggleButtonSwitch}"  Command="{Binding InfoCmd}"  />
                                 </StackPanel>
                                 
                             </Grid>
@@ -109,11 +109,11 @@
                             <Button x:Name="Btn_catchcircle" Width="250" Height="50"  Content="捕捉圆定位" FontSize="25" Foreground="Blue" Click="Btn_catchcircle_Click" Margin="2" />
                             <Button x:Name="Btn_platedete" Height="50" Width="250" Content="模板匹配设置" FontSize="25" Foreground="Blue" Click="Btn_platedete_Click" Margin="2"/>
                             <Button x:Name="Btn_angledete" Height="50" Width="250" Content="标识/剪口检测" FontSize="25" Foreground="Blue" Click="Btn_angledete_Click" Margin="2"/>
-                            <Button x:Name="Btn_somadete" Height="50" Width="250" Content="组装相机规格" FontSize="25" Foreground="Blue" Click="Btn_somadete_Click" Margin="2"/>
-                            <Button x:Name="Btn_ringdete" Height="50" Width="250" Content="点胶相机规格" FontSize="25" Foreground="Blue" Click="Btn_ringdete_Click" Margin="2"/>
-                            <Button x:Name="Btn_spec1" Height="50" Width="250" Content="判胶相机规格" FontSize="25" Foreground="Blue" Click="Btn_spec1_Click" Margin="2"/>
-                            <Button x:Name="Btn_spec2" Height="50" Width="250" Content="检测规格2设置" FontSize="25" Foreground="Blue" Margin="2"/>
-                            <Button x:Name="Btn_spec3" Height="50" Width="250" Content="检测规格3设置" FontSize="25" Foreground="Blue" Margin="2"/>
+                            <Button x:Name="Btn_AssembleDetec" Height="50" Width="250" Content="组装/点胶相机检测" FontSize="25" Foreground="Blue" Click="Btn_DJspec_Click" Margin="2"/>
+                            <Button x:Name="Btn_PJdetec" Height="50" Width="250" Content="判胶相机规格" FontSize="25" Foreground="Blue" Click="Btn_PJspec1_Click" Margin="2"/>
+                            <Button x:Name="Btn_ComToCam"  Height="50" Width="250" Content="相机通讯设置"  FontSize="25" Foreground="Blue" Click="Btn_ComToCam_Click" Margin="2"/>
+                            <Button x:Name="Btn_ComToPLC"  Height="50" Width="250" Content="PLC通讯设置"  FontSize="25" Foreground="Blue" Click="Btn_ComToPLC_Click" Margin="2"/>
+                            
                         </StackPanel>
                     </ScrollViewer>
                 </TabItem>

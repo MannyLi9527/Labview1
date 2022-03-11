@@ -11,7 +11,7 @@
              >
     <Grid>
         <StackPanel Width="250">
-            <TextBlock  x:Name="Name_Detec"  Text="点胶内检测" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Bottom" Foreground="Blue"/>
+            <TextBox  x:Name="Name_Detec"  Text="{Binding text_value_0}" Width="150" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Bottom" Foreground="Blue"/>
             
             <Grid>
                 <Grid.ColumnDefinitions>
@@ -45,7 +45,7 @@
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
                 <TextBlock Grid.Column="0" Text="外径:" FontSize="25" Foreground="Black"   HorizontalAlignment="Right" VerticalAlignment="Center" />
-                <TextBox Text="{}" x:Name="Name_radiuOut" Grid.Column="1" PreviewKeyDown="intervalBox_PreviewKeyDown" PreviewTextInput="intervalBox_PreviewTextInput" DataObject.Pasting="intervalBox_Pasting" input:InputMethod.IsInputMethodEnabled="False" FontSize="25" Foreground="Blue"/>
+                <TextBox  Text="{Binding text_value_2}" x:Name="Name_radiuOut" Grid.Column="1" PreviewKeyDown="intervalBox_PreviewKeyDown" PreviewTextInput="intervalBox_PreviewTextInput" DataObject.Pasting="intervalBox_Pasting" input:InputMethod.IsInputMethodEnabled="False" FontSize="25" Foreground="Blue"/>
             </Grid>
 
             <Grid>
@@ -54,7 +54,7 @@
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
             <TextBlock Grid.Column="0" Text="阈值:" FontSize="25" Foreground="Black" HorizontalAlignment="Right" VerticalAlignment="Center" />
-            <TextBox x:Name="Name_threshIn" Grid.Column="1" PreviewKeyDown="intervalBox_PreviewKeyDown" PreviewTextInput="intervalBox_PreviewTextInput" DataObject.Pasting="intervalBox_Pasting" input:InputMethod.IsInputMethodEnabled="False" FontSize="25" Foreground="Blue" />
+                <TextBox Text="{Binding text_value_3}" x:Name="Name_threshIn" Grid.Column="1" PreviewKeyDown="intervalBox_PreviewKeyDown" PreviewTextInput="intervalBox_PreviewTextInput" DataObject.Pasting="intervalBox_Pasting" input:InputMethod.IsInputMethodEnabled="False" FontSize="25" Foreground="Blue" />
             </Grid>
 
 
@@ -64,7 +64,7 @@
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
                 <TextBlock Grid.Column="0" Text="规格1:" FontSize="25" Foreground="Black" HorizontalAlignment="Right" VerticalAlignment="Center"  />
-                <TextBox x:Name="Name_threshOut" Grid.Column="1" PreviewKeyDown="intervalBox_PreviewKeyDown" PreviewTextInput="intervalBox_PreviewTextInput" DataObject.Pasting="intervalBox_Pasting" input:InputMethod.IsInputMethodEnabled="False"  FontSize="25" Foreground="Blue"/>
+                <TextBox Text="{Binding text_value_4}" x:Name="Name_threshOut" Grid.Column="1" PreviewKeyDown="intervalBox_PreviewKeyDown" PreviewTextInput="intervalBox_PreviewTextInput" DataObject.Pasting="intervalBox_Pasting" input:InputMethod.IsInputMethodEnabled="False"  FontSize="25" Foreground="Blue"/>
             </Grid>
 
             <Grid>
@@ -73,7 +73,7 @@
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
                 <TextBlock Grid.Column="0"  Text="规格2:" FontSize="25" Foreground="Black" HorizontalAlignment="Right" VerticalAlignment="Center"  />
-                <TextBox x:Name="Name_spec1" Grid.Column="1" PreviewKeyDown="intervalBox_PreviewKeyDown" PreviewTextInput="intervalBox_PreviewTextInput" DataObject.Pasting="intervalBox_Pasting" input:InputMethod.IsInputMethodEnabled="False"  FontSize="25" Foreground="Blue"/>
+                <TextBox Text="{Binding text_value_5}" x:Name="Name_spec1" Grid.Column="1" PreviewKeyDown="intervalBox_PreviewKeyDown" PreviewTextInput="intervalBox_PreviewTextInput" DataObject.Pasting="intervalBox_Pasting" input:InputMethod.IsInputMethodEnabled="False"  FontSize="25" Foreground="Blue"/>
             </Grid>
 
 
@@ -84,7 +84,7 @@
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
                 <TextBlock Grid.Column="0" Text="阈值:" FontSize="25" Foreground="Black" HorizontalAlignment="Right" VerticalAlignment="Center"  />
-                <TextBox x:Name="Name_spec2" Grid.Column="1" PreviewKeyDown="intervalBox_PreviewKeyDown" PreviewTextInput="intervalBox_PreviewTextInput" DataObject.Pasting="intervalBox_Pasting" input:InputMethod.IsInputMethodEnabled="False"  FontSize="25" Foreground="Blue"/>
+                <TextBox Text="{Binding text_value_6}" x:Name="Name_spec2" Grid.Column="1" PreviewKeyDown="intervalBox_PreviewKeyDown" PreviewTextInput="intervalBox_PreviewTextInput" DataObject.Pasting="intervalBox_Pasting" input:InputMethod.IsInputMethodEnabled="False"  FontSize="25" Foreground="Blue"/>
             </Grid>
 
             <Grid>
@@ -106,9 +106,9 @@
                 </Grid.ColumnDefinitions>
                 <TextBlock Grid.Column="0" Text="OK判定:" FontSize="25" Foreground="Black" HorizontalAlignment="Right" VerticalAlignment="Center"/>
                 <ComboBox Grid.Column="1" FontSize="15" VerticalAlignment="Center">
-                    <ComboBoxItem Content="实测&gt;规格1" FontSize="20" IsSelected="True" />
-                    <ComboBoxItem Content="规格1&lt;实测&lt;规格2" FontSize="20"/>
-                    <ComboBoxItem Content="实测&lt;规格2" FontSize="20" />
+                    <ComboBoxItem Content="实测&gt;规格1" FontSize="10" IsSelected="True" />
+                    <ComboBoxItem Content="规格1&lt;实测&lt;规格2" FontSize="10"/>
+                    <ComboBoxItem Content="实测&lt;规格2" FontSize="10" />
                 </ComboBox>
             </Grid>
 
